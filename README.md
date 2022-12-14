@@ -18,7 +18,9 @@ const simpleApis = require('@abhidevofficial/simple-apis')
 ```js
 let number = '91xxxx' // Required: Enter WhatsApp number with country code ( OMIT SYMBOLS LIKE PLUS, HYPHENS AND BRACKETS )
 let text = 'Hey' // Optional: Prefillied message
-simpleApis.generateWaChatUrl(number, text);
+let result = simpleApis.generateWaChatUrl(number, text);
+
+console.log(result);
 // Returns:
 // https://wa.me/91xxxx?text=Hey
 ```
