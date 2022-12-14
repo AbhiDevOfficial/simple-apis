@@ -23,7 +23,6 @@
     "qs": "^6.10.1"
   },
   "directories": {
-    "data": "data",
-    "lib": "lib"
+    "data": "data"
   }
 }
