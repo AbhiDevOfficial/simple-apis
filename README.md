@@ -16,7 +16,7 @@ const simpleApis = require('@abhidevofficial/simple-apis')
 #### Download posts from instagram using its url:
 
 ```js
-let url = `https://www.instagram.com/p/....../?igshid=.....=`
+let url = 'https://www.instagram.com/p/....../?igshid=.....='
 let post = simpleApis.igPostDownload(url);
 
 console.log(post);
@@ -25,10 +25,57 @@ console.log(post);
 #### Download story from instagram using username:
 
 ```js
-let username = `_abhi.76_`
+let username = '_abhi.76_'
 let story = simpleApis.igStoryDownload(username);
 
 console.log(story);
+```
+
+#### Convert Emoji to Image:
+
+```js
+let emoji = '🤩' // Required: Enter emoji
+let type = 'apple' // Optional: Enter the preview/type of emoji
+/*
+Valid types are:
+- whatsapp
+- facebook
+- twitter
+- skype
+- microsoft
+- apple
+- google
+- samsung
+- joypixel
+- openemoji
+- lg
+*/
+let emoji = simpleApis.emojiToImage(emoji, type);
+
+console.log(emoji)
+/* Returns:
+
+IF YOU LEAVE TYPE ARGUMENT EMPTY,
+YOU WILL GET URLS OF ALL TYPES.
+THE RESULT WILL BE SAME AS SHOWN BELOW
+BUT THE 'image' STRING WILL BE 'images'
+WHOSE VALUE IS AN OBJECT WITH TYPE AS STRING
+AND URL/IMAGE AS VALUE.
+
+{
+  "status": true,
+  "creator": "@AbhiDevOfficial",
+  "npm": "@abhidevofficial/simple-apis",
+  "message": "success",
+  "result": {
+     "name": "", 
+     "emoji": "🤩",
+     "unicode": "U+1F929",
+     "desc": "",
+     "image": ""
+  }
+}
+*/
 ```
 
 #### Get direct WhatsApp Chat URL ( wa.me link generator ):
