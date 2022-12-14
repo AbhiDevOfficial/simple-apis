@@ -3,6 +3,11 @@ const axios = require('axios')
 var export_dataP = require("../lib/export");
 var lib_reels = require("../lib/reels");
 var insta_story = require("./instagram_story");
+var getMetafromStories = require("../lib/stories_meta");
+var formatInstaStoryData = require("../lib/stories_format");
+var stories_fetch = require("../lib/stories_fetch");
+var fs = require("fs")
+var if_cont = false
 
 async function igPostDownload(url) {
     var data;
@@ -383,13 +388,6 @@ async function igReelDownload(url) {
     payload.data.comments =  data.media.data.metrics.comments
     return payload;
 };
-
-var getMetafromStories = require("../lib/stories_meta");
-const formatInstaStoryData = require("../lib/stories_format");
-var stories_fetch = require("../lib/stories_fetch");
-var axios = require("axios");
-var fs = require("fs")
-var if_cont = false
 
 async function insta_story_legacy(username) {
     var data;
