@@ -13,7 +13,25 @@ const simpleApis = require('@abhidevofficial/simple-apis')
 
 ### APIs
 
-#### Get direct WhatsApp Chat URL ( wa.me link generator )
+#### Download posts from instagram using its url:
+
+```js
+let url = `https://www.instagram.com/p/....../?igshid=.....=`
+let post = simpleApis.igPostDownload(url);
+
+console.log(post);
+```
+
+#### Download story from instagram using username:
+
+```js
+let username = `_abhi.76_`
+let story = simpleApis.igStoryDownload(username);
+
+console.log(story);
+```
+
+#### Get direct WhatsApp Chat URL ( wa.me link generator ):
 
 ```js
 let number = '91xxxx' // Required: Enter WhatsApp number with country code ( OMIT SYMBOLS LIKE PLUS, HYPHENS AND BRACKETS )
@@ -27,5 +45,12 @@ console.log(result);
 
 ### Thank You:
 
+- [axios](https://npmjs.com/package/axios)
+
+- [cheerio](https://npmjs.com/package/cheerio)
+
+- [qs](https://npmjs.com/package/qs)
+
 **Thank You for using [@abhidevofficial/simple-apis](https://npmjs.com/package/@abhidevofficial/simple-apis)!**
+
 **Please feel free to give a STAR 🌟 for our [@abhidevofficial/simple-apis](https://github.com/AbhiDevOfficial/simple-apis).**
