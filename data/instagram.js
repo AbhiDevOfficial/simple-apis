@@ -389,7 +389,7 @@ async function igReelDownload(url) {
     return payload;
 };
 
-async function insta_story_legacy(username) {
+async function insta_story_legency(username) {
     var data;
     try {
         data = await getMetafromStories(username)
