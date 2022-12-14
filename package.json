@@ -1,0 +1,28 @@
+{
+  "name": "simple-apis",
+  "version": "1.0.0",
+  "description": "Simple and useful apis for developers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbhiDevOfficial/simple-apis.git"
+  },
+  "keywords": [],
+  "author": "AbhiDevOfficial",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AbhiDevOfficial/simple-apis/issues"
+  },
+  "homepage": "https://github.com/AbhiDevOfficial/simple-apis#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.10",
+    "qs": "^6.10.1"
+  },
+  "directories": {
+    "data": "data"
+  }
+}
