@@ -1,6 +1,6 @@
 {
   "name": "simple-apis",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple and useful apis for developers.",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,7 @@
     "qs": "^6.10.1"
   },
   "directories": {
-    "data": "data"
+    "data": "data",
+    "lib": "lib"
   }
 }
