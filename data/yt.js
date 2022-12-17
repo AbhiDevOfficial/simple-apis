@@ -16,7 +16,7 @@ function youtubeVideoDownload(url) {
  }
  if (!video) throw new Error("INV_URL : Invalid url or the entered url has a problem.")
  video.pipe(fs.createWriteStream('./' + url + '.mp4'));
- let readVideo = yt.on('end', async () => fs.readFileSync('./' + url + '.mp4'));
+ let readVideo = video.on('end', async () => fs.readFileSync('./' + url + '.mp4'));
  return readVideo;
 }
 
