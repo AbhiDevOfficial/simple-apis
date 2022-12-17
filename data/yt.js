@@ -1,7 +1,6 @@
 const ytdl = require('ytdl-core')
 const ffmpeg = require('fluent-ffmpeg')
 const yts = require('yt-search')
-const ytdl = require('ytdl-core')
 const fs = require('fs')
 
 function youtubeVideoDownload(url) {
@@ -39,7 +38,7 @@ function youtubeSearch(query) {
  return new Promise((resolve, reject) => {
   if (!query) throw new Error("QUERY_ARG : Missing 'query' argument.")
   try {
-    var ytsResult = await yts(query);
+    var ytsResult = yts(query);
   } catch {
     throw new Error("NOT_FOUND : Couldn't find result for this query.")
   }
@@ -47,3 +46,5 @@ function youtubeSearch(query) {
   resolve({ status: true, creator: 'AbhiDevOfficial', npm: '@abhidevofficial/simple-apis', message: 'success', result: result })
  })
 }
+
+module.exports = { youtubeSearch, youtubeVideoDownload, youtubeAudioDownload };
