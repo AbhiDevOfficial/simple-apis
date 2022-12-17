@@ -1,10 +1,10 @@
 const { generateWaChatUrl } = require('./data/wame')
-const { yts: youtubeSearch, ytv: youtubeVideoDownload, yta: youtubeAudioDownload } = require('./data/yt')
+const { youtubeSearch, youtubeVideoDownload, youtubeAudioDownload } = require('./data/yt')
 // const { igPostDownload, igStoryDownload } = require('./data/instagram')
 
 module.exports = {
-  youtubeSearch: yts,
-  youtubeVideoDownload: ytv,
-  youtubeAudioDownload: yta,
+  youtubeSearch: youtubeSearch,
+  youtubeVideoDownload: youtubeVideoDownload,
+  youtubeAudioDownload: youtubeAudioDownload,
   generateWaChatUrl: generateWaChatUrl
 };
