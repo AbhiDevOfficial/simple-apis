@@ -1,5 +1,5 @@
-const { generateWaChatUrl } = require('./data/wame')
+const { generateDirectLink } = require('./data/smlink')
 
 module.exports = {
-  generateWaChatUrl: generateWaChatUrl
+  generateDirectLink: generateDirectLink
 };
