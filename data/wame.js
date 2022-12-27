@@ -1,3 +1,5 @@
+const axios = require('axios')
+
 function generateDirectLink(id, sm) {
   if (!id) throw new Error("#ID_ARG : ID argument seems to be missing.")
   if (!sm) throw new Error("#SM_ARG : SM argument seems to be missing.")
@@ -35,8 +37,13 @@ function generateDirectLink(id, sm) {
     link = 'https://www.snapchat.com/add/' + id;
   } else if (sm == 'line') {
     link = 'https://line.me/R/ti/p/' + id;
-  } 
+  }
   if (!link) throw new Error("404: FAILED")
+  axios.get(link).catch((error) => {
+    if (error.response.status == 404) {
+       throw new Error("404: Invalid username/number.")
+     }
+  })
   return link;
 }
 
