@@ -55,3 +55,5 @@ async function youtubeAudioDownload(q) {
   var result = yt.on('end', async () => fs.readFileSync('./' + VID + '.mp3'))
   return result;
 }
+
+module.exports = { youtubeSearch, youtubeVideoDownload, youtubeAudioDownload }
