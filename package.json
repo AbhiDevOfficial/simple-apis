@@ -1,6 +1,6 @@
 {
   "name": "@abhidevofficial/simple-apis",
-  "version": "1.0.1",
+  "version": "1.1.2",
   "description": "Simple and useful apis for developers.",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,7 @@
     "cheerio": "^1.0.0-rc.10",
     "qs": "^6.10.1",
     "yt-search": "^2.10.3",
+    "ytdl-core": "^4.11.2",
     "pdfkit": "^0.13.0"
   },
   "directories": {
