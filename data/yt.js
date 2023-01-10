@@ -26,10 +26,7 @@ async function youtubeVideoDownload(q) {
  } catch {
     return false;
  }
-  var yt = ytdl(VID, {filter: format => format.container === 'mp4' && ['720p', '480p', '360p', '240p', '144p'].map(() => true)})
-  yt.pipe(fs.createWriteStream('./' + VID + '.mp4'))
-  var result = yt.on('end', async () => fs.readFileSync('./' + VID + '.mp4'))
-  return result;
+  return ytdl(VID, {filter: format => format.container === 'mp4' && ['720p', '480p', '360p', '240p', '144p'].map(() => true)});
 }
 
 
