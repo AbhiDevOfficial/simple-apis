@@ -22,21 +22,11 @@ async function youtubeVideoDownload(q) {
 
 async function youtubeAudioDownload(q) {
  var VID = '';
- try {
-   if (q.startsWith('https://') && q.includes('youtu')) {
-     if (q.includes('/shorts/')) VID = q.replace('shorts/', '').split('/')[3]
-     var tsts = q.replace(/[watch?v=]/g, '')
-     var alal = tsts.split('/')[3]
-     VID = alal
-   } else {
-     VID = await youtubeSearch(q);
-     VID = VID[0].url
-     var tsts = VID.replace(/[watch?v=]/g, '')
-     var alal = tsts.split('/')[3]
-     VID = alal
- } catch {
-    return false;
- }
+ VID = await youtubeSearch(q);
+ VID = VID[0].url
+ var tsts = VID.replace(/[watch?v=]/g, '')
+ var alal = tsts.split('/')[3]
+ VID = alal
   var yt = ytdl(VID, {filter: format => format.container === 'mp3' })
   yt.pipe(fs.createWriteStream('./' + VID + '.mp3'))
   var result = yt.on('end', async () => fs.readFileSync('./' + VID + '.mp3'))
